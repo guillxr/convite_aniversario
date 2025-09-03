@@ -131,7 +131,6 @@ body {
 
 .content {
     top: 0;
-    height: 100dvh;
     width: 100%;
     position: relative;
     z-index: 2;
