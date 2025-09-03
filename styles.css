@@ -1,0 +1,392 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.cdnfonts.com/css/minecraft-4");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: rgb(30, 30, 30);
+  --border-color: rgb(40, 18, 18);
+  --primary-green: rgb(0, 140, 69);
+  --light-green: rgb(39, 206, 64);
+  --medium-dark-green: rgb(12 110 61);
+  --dark-green: rgb(6, 77, 42);
+  --border-color: rgb(40, 18, 18);
+  --text-color: white;
+  --primary-hover: rgb(10, 152, 80);
+}
+
+body {
+    user-select: none;
+    font-family: "Press Start 2P", sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #45b1fa;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    max-width: 500px;
+}
+
+.elements {
+    z-index: 3;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.imgAlex {
+    width: 100px;
+    animation: floating-water 10s ease-in-out infinite;
+}
+
+.imgSteve {
+    width: 100px;
+    animation: floating-water-invert 10s ease-in-out infinite;
+}
+
+.imgText {
+    position: relative;
+    z-index: 3;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.frase {
+    position: relative;
+    top: -100px;
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-top: 20px;
+    text-shadow: 1px 1px 4px #000000;
+}
+
+.data {
+    border-top: dashed 2px #1d1d1d;
+    padding: 20px;
+    position: relative;
+    top: -80px;
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.dayContainer {
+    gap: 5px;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: row;
+    color: #bbf5f8;
+    justify-content: center;
+}
+
+.weekly {
+    font-size: 1rem;
+    color: #f1f1f1;
+}
+
+.day {
+    transform: scaleY(1.2);
+    font-size: 2.5rem;
+}
+
+.monthYear {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.month {
+    transform: scaleX(0.92);
+    font-size: 1rem;
+}
+
+.year {
+    transform: scaleX(1.25);
+    font-size: 1.5rem;
+}
+
+.time {
+  top: 10px;
+  position: relative;
+  padding: 6px 20px;
+  background: #e79a46;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
+    background-color: #4ba828;
+    border: none;
+    color: #f1f1f1;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 3px 0px rgba(0, 0, 0);
+}
+
+@keyframes floating-water {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(6px, -6px) rotate(1deg);
+  }
+  50% {
+    transform: translate(0px, -10px) rotate(-1deg);
+  }
+  75% {
+    transform: translate(-6px, -6px) rotate(1deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+@keyframes floating-water-invert {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(-6px, -6px) rotate(-1deg);
+  }
+  50% {
+    transform: translate(0px, -10px) rotate(1deg);
+  }
+  75% {
+    transform: translate(6px, -6px) rotate(-1deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+.bubbles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -2;
+}
+
+.bub {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translate3d(0, 0, 0);
+  opacity: 0;
+
+  --dur: 4s;
+  --delay: 0s;
+  --drift-x: 80px;
+  animation: rise var(--dur) ease-in var(--delay) infinite;
+  will-change: transform, opacity;
+}
+
+.bub::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 25px;
+  right: 23px;
+  opacity: .8;
+}
+
+@keyframes rise {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 0, 0) scale(.9);
+  }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% {
+    transform: translate3d(var(--drift-x), -110vh, 0) scale(1.1);
+    opacity: 0;
+  }
+}
+
+.bub.a { left: 10%; --dur: 4s;  --delay: 2s;   --drift-x:  90px; }
+.bub.b { left: 20%; --dur: 3s;  --delay: 2.8s; --drift-x: -90px; }
+.bub.c { left: 28%; --dur: 10s; --delay: 7.6s; --drift-x:  70px; }
+.bub.d { left: 40%; --dur: 3.6s;--delay: 1s;   --drift-x: -60px; }
+.bub.e { left: 75%; --dur: 3.2s;--delay: 5s;   --drift-x:  80px; }
+.bub.f { left: 90%; --dur: 5s;  --delay: 6s;   --drift-x: -80px; }
+.bub.g { left: 60%; --dur: 4.4s;--delay: 4s;   --drift-x:  60px; }
+.bub.h { left: 35%; --dur: 6s;  --delay: 0s;   --drift-x: -70px; }
+.bub.i { left: 65%; --dur: 3.2s;--delay: 4.2s; --drift-x:  85px; }
+.bub.j { left: 3%;  --dur: 4s;  --delay: 3s;   --drift-x: -75px; }
+.bub.k { left: 50%; --dur: 3.2s;--delay: 4s;   --drift-x:  65px; }
+
+
+/* button */
+
+.minecraft-button {
+  top: -50px;
+  font-family: 'Minecraft', sans-serif;
+  font-size: 1.4rem;
+  text-decoration: none;
+  text-align: center;
+  text-shadow: var(--dark-green) 0 .1em 0; 
+  color: var(--text-color); 
+  background-color: var(--primary-green);
+  position: relative;
+  
+  width: 7em;
+ padding-bottom: .3em;
+  border-radius: .1rem;
+}
+
+.minecraft-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -.175em;
+  width: 105%;
+  height: 100%;
+  background-color: var(--medium-dark-green);
+  z-index: -1;
+  border: .07em solid var(--border-color)
+  
+}
+
+.minecraft-button::after {
+  content: '';
+  border: 1px solid red;
+  position: absolute;
+  top: -0.175em;
+  left: 0;
+  width: 100%;
+  height: 125%;
+  background-image: linear-gradient(
+    var(--light-green) 50%,
+    var(--dark-green)
+  );
+  z-index: -1;
+  border: .07em solid var(--border-color);
+}
+
+.minecraft-button:hover {
+  background-color: var(--primary-hover);
+}
+
+/* background */
+
+.background {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -3;
+}
+
+.background img {
+  position: absolute;
+  bottom: 0;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.background .bg-left {
+  width: 300px;
+  left: 0;
+}
+
+.background .bg-right {
+  width: 300px;
+  right: 0;
+}
+
+.background .bg-top {
+  width: 140%;
+  top: 0;
+  left: 30%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 500px){
+    body {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-image: url("https://i.pinimg.com/1200x/89/21/9b/89219b60d170d1b5fbb4b4ab11bf4996.jpg");
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      backdrop-filter: blur(8px);
+      background: rgba(0, 0, 0, 0.2);
+      z-index: -1;
+    }
+
+    .container {
+      background-color: #45b1fa;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      height: 920px;
+      width: 490px;
+      overflow: hidden;
+
+      border: 12px solid #000;
+      border-radius: 32px; 
+      box-shadow: 0 0 20px rgba(0,0,0,0.6);
+      animation: floating-water-invert 10s ease-in-out infinite;
+      
+    }
+    .background {
+      position: absolute;
+      inset: 0;
+      pointer-events: none; 
+      z-index: -1;
+    }
+
+    .background img {
+      position: absolute;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .bg-left  { bottom: 0; left: 0; width: 200px; }
+    .bg-right { bottom: 0; right: 0; width: 200px; }
+    .bg-top   { top: 0; left: 50%; transform: translateX(-50%); width: 120%; }
+}

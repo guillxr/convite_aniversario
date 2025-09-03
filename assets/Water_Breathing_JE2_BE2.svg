@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="50" height="50">
+	<title>Water_Breathing_JE2_BE2</title>
+	<defs>
+		<image  width="140" height="160" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACgCAMAAADpcHRBAAAAAXNSR0IB2cksfwAAAKhQTFRFAAAAd6a4aqrCa6nCbanCbanAdbHId7HGgq2+WrDQW6/QXa7OZ7bUaLbScqe8f67AaqrEdae48v//9f7+9P/+a5qqZZ2wbpmo8v/+VqG89P//9f7/9/7+W6/Ofa/AZZyykMfdkMjblsXXVqG+gczqgc3omcTTa6rAZbfUdLLIdbLGZ7fSgq28cqi6Y52wjsjblsbVVaK8gM3ocKi8aKvE3///5f//5///cmtAPgAAADh0Uk5TAP////////////////////////////////////////////////////////////////////////+1/GPFAAADD0lEQVR4nO3c72vUMBgH8CdXr9eJbOA2b47hC2Eoii/E//8P8J1vVJQ5QURUlPkL7G3Teml+dVuaS0l6pnffMJqQa5oPXHmuzdOOkaUwpltyy0SL8b/SNiRKYbbO0eTCxxc2pzQDBhhghonZ/HX585HGFPR97TAq7t6gH84hW6UaGjsWNzDqTJnRX+eQSS7q+GcPMMAA0wNGhLrNedeJc0hRyTp6+EsLY4u7N2WfkVb01TJ4V+/3KQ7GdqZsjy/vdmbF3MpE/Yc+AwMMDyN1yYFJH1MwcTW3Qe+BMZj8nL44By8VYz9TgAEGmI4Yaou7PWKyfdH4MD+kKge/RW0PdeuCyfWNx2nnwbFvWljIAYEBBphkMSG38XfkLXasdc+0MKbpu77ru17Mrix4M8r0uoVtjsYA3zPAd4XLZCBU2aET5poDGGCA6QHjG/5Uaqyiymu/5mQqztjnSBVjSr2+u8FbH3Xfbbk3o2MnISSfZ8XUV/3Xectc9U/l3uf01jlJSAYCGGCA6RUz5dGsJc6M6bVzkpAUWvqY7sWVzzPFvsRi8nmRMHESRcAAQzprVZeWpdy1x+T/9WvauaYwBZ+lXJxCWysM8Z9W33zeEjD+GYhImExiypQws0YGApgaY8nNAFNjClGXKWDG8vL6gF7pvm1Z+6fQVhGT3xU1o5edx5qblsiY46DkYixMlEwnMD1jHsjjVPQCmJYDhuTzImFipNAOVxJjSkg+LzomJAMBDDDAJIvxDX+Pnou6mUIbEqb78wym1Ou7e7xlLtLv88085G7RM9tsbkz3DKwp9VV/jTnSfYd887MtAwEMMMAsCfNEf35E4pKM0b03omdRWKtTaC1xxp5CSx+j4u5jGulo+9SyX/R34myd6kx5SCP+dXus+kd6UhqYVcC8Ey1gksZkMpIv6TW0wWAm9M05GJgkMIueDgIGmCQxtowjMLz45kiivzgTMgkwwAAzKIzv8mns/wWWPsaUXf25Ye0rinUtt0eM+vUhMi+e7Ml60dPkwAADTLKYqc5MXY0zi16HGDjmH52o8gir+xB4AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Background" href="#img1" x="0" y="0"/>
+</svg>
